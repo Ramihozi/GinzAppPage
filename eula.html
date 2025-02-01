@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GinzApp - Terms of Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .terms {
+            text-align: left;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fafafa;
+            margin-bottom: 15px;
+        }
+        .agree-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .agree-container input {
+            margin-right: 10px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>GinzApp - End User License Agreement (EULA)</h2>
+        <div class="terms">
+            <p>By using GinzApp, you agree to the following terms and conditions:</p>
+            <ul>
+                <li>Objectionable content and abusive behavior are strictly prohibited.</li>
+                <li>No posting of offensive, hateful, violent, or illegal content.</li>
+                <li>Harassment, threats, or discrimination will not be tolerated.</li>
+                <li>Accounts violating these terms may be banned without notice.</li>
+                <li>By proceeding, you accept responsibility for your actions.</li>
+            </ul>
+            <p>Failure to comply with these terms may result in account suspension.</p>
+        </div>
+        <div class="agree-container">
+            <input type="checkbox" id="agree" onchange="toggleButton()">
+            <label for="agree">I agree to the Terms of Service</label>
+        </div>
+        <button id="proceed" disabled>Proceed</button>
+    </div>
+
+    <script>
+        function toggleButton() {
+            document.getElementById('proceed').disabled = !document.getElementById('agree').checked;
+        }
+    </script>
+</body>
+</html>
