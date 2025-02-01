@@ -35,29 +35,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             background: #fafafa;
-            margin-bottom: 15px;
-        }
-        .agree-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-        .agree-container input {
-            margin-right: 10px;
-        }
-        button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        button:disabled {
-            background: #bdc3c7;
-            cursor: not-allowed;
         }
     </style>
 </head>
@@ -75,17 +52,6 @@
             </ul>
             <p>Failure to comply with these terms may result in account suspension.</p>
         </div>
-        <div class="agree-container">
-            <input type="checkbox" id="agree" onchange="toggleButton()">
-            <label for="agree">I agree to the Terms of Service</label>
-        </div>
-        <button id="proceed" disabled>Proceed</button>
     </div>
-
-    <script>
-        function toggleButton() {
-            document.getElementById('proceed').disabled = !document.getElementById('agree').checked;
-        }
-    </script>
 </body>
 </html>
